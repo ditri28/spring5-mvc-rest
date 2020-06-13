@@ -44,7 +44,7 @@ public class CustomerServiceImpl implements CustomerService {
                     customerDTO.setCustomerUrl(getCustomerUrl(id));
                     return customerDTO;
                 })
-                ..orElseThrow(ResourceNotFoundException::new); //todo implement better exception handling
+                .orElseThrow(ResourceNotFoundException::new); //todo implement better exception handling
     }
 
     @Override
